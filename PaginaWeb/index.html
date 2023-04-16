@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Documento</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Pagina de bart</h1>
+        <h1>Area de Texto</h1>
+        <textarea name="comment" cols="40" rows="5" minlength="20" maxlength="50" required>Hola! Creo que estás completamente equivocado!</textarea>  
+    
+        <h1>Inputs</h1>
+        
+        <h2>Texto</h2>
+            <input type="text" name="nombre" minlenght= "5" maxlength="10" placeholder="Complete el nombre" />
+            <br>
+            <input type="text" name="textodesololectura" value="Hola" readonly />
+            <br>
+            <input type="text" name="textodeshabilitado" value="Ho!" disabled />
+            <br>
+            <input type="text" name="obligatorio" required />*
+        
+        <h2>Búsqueda</h2>
+            <input type="search" name="busquedamusica" placeholder="Canción, autor, álbum..." />
+            <br>
+            <input type="search" name="busquedacodigo" size="4" maxlength="4" />
+            <br>
+            <input type="search" name="busquedamodelos" list="listamodelos" />
+            <datalist id="listamodelos">
+                <option value="Camaro">
+                <option value="Corvette">
+                <option value="Impala">
+                <option value="Colorado">
+            </datalist>
+            <br>
+            <input type="search" name="busquedacodigo" pattern="[A-Za-z0-9]{8,20}" title="Un código válido consiste en una cadena con 8 a 20 caracteres, cada uno de los cuales es una letra o un dígito" required />
+        
+        <h2>Password</h2>
+            <input type="password" name="pass" placeholder="Elije una contraseña fuerte" />
+            <br>
+            <input type="password" name="pass" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjuto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menor un dígito" required />
+        
+            <h2>Teléfono</h2>
+            <input type="tel" name="telefono" placeholder="(Código de área) Número" />
+            <br>
+            <input type="tel" name="numerocontactado" list="listatelefonos" />
+            <datalist id="listatelefonos">
+                <option value="(154) 215-4468">
+                <option value="(154) 254-7863">
+                <option value="(146) 123-7821">
+                <option value="(112) 645-4565">
+            </datalist>
+            <br>
+            <input type="tel" name="telephone" pattern="\([0-9]{3}\) [0-9]{3}[ -][0-9]{4}" title="A valid telephone number consist of a 3 digits code area between brackets, a space, the three first digits of the number, a space or hypen (-), and four more digits" required />
+        
+        <h2>URL</h2>
+            <input type="url" name="sitioweb" placeholder="¿Tienes un sitio web?" />
+            <br>
+            <input type="url" name="motordebusqueda" value="http://www.google.com" />
+            <br>
+            <input type="url" name="motordebusqueda" list="listaurls" />
+            <datalist id="listaurls">
+                <option value="http://www.duckduckgo.com">
+                <option value="http://www.google.com">
+                <option value="http://www.yahoo.com">
+                <option value="http://www.bing.com">
+            </datalist>
+            <br>
+            <input type="url" name="sitioweb" pattern=".+\.com" title="Sólo se permiten URLs .com bien formadas" />
+        
+        <h2>Email</h2>
+            <input type="email" name="direccionemail" placeholder="Ej.: usuario@servidor.com" />
+            <br>
+            <input type="email" name="direccionemail" value="superusuario138@yahoo.com" />
+            <br>
+            <input type="email" name="emails" multiple />
+            <br>
+            <input type="email" name="direccioncorreo" pattern=".+@[mM][aA][iI][lL][fF][oO][rR][aA][lL][lL][.][cC][oO][mM]" title="Solo se permiten cuentas de MailForAll.com" />
+        
+        <h2>Oculto</h2>
+            <input type="hidden" name="ubicacion" value="pagina-del-campo-hidden" />
+            
+        <h2>Números</h2>
+            <input type="number" name="edad" />
+            <br>
+            <input type="number" name="limonesusados" min="1" max="5" step="0.5" />
+            <br>
+            <input type="number" name="pesocompuesto" list="listapesos" step="0.001">
+            <datalist id="listapesos">
+                <option value="0.58">
+                <option value="16.5">
+                <option value="148">
+                <option value="26.469">
+            </datalist>
+        
+        <h2>Rangos</h2>
+            <input type="range" name="volumen" />
+            <br>
+            <input type="range" name="red" min="0" max="255" step="15" />
+            <br>
+            <input type="range" name="nivelcafeina" list="listanivelescafeina" />
+            <datalist id="listanivelescafeina">
+                <option value="0" value="Alerta!">
+                <option value="50" value="Bajo">
+                <option value="100" value="Normal">
+            </datalist> 
+        
+        <h2>Fecha</h2>
+            <input type="date" name="fechaesperada" />
+            <br>
+            <input type="date" name="fechacita" list="listafechascita" />
+            <datalist id="listafechascita">
+                <option value="2015-05-05">
+                <option value="2015-05-12">
+                <option value="2015-05-19">
+                <option value="2015-05-26">
+            </datalist>
+            <br>
+            <input type="date" name="fechacita" min="2015-02-20" max="2015-04-24" step="7" />
+        
+        <h2>Mes</h2>
+            <input type="month" name="mesnacimiento" />
+            <br>
+            <input type="month" name="mesvacaciones" list="listamesesvacaciones" />
+            <datalist id="listamesesvacaciones">
+                <option value="2023-01">
+                <option value="2023-02">
+                <option value="2023-07">
+                <option value="2023-12">
+            </datalist>
+            <br>
+            <input type="month" name="messeleccionado" min="2015-06" max="2016-10" step="2" />
+        
+        <h2>Semana</h2>
+            <input type="week" name="unasemana" />
+            <br>
+            <input type="week" name="semanavacaciones" list="listasemanasvacaciones" />
+            <datalist id="listasemanasvacaciones">
+                <option value="2022-W53">
+                <option value="2023-W01">
+                <option value="2023-W02">
+                <option value="2023-W03">
+                <option value="2023-W04">
+            </datalist>
+            <br>
+            <input type="week" name="semanaelegida" min="2015-W06" max="2015-W24" step="2" />
+        
+        <h2>Hora</h2>
+            <input type="time" name="eta" />
+            <br>
+            <input type="time" name="limitetiempo" list="listalimitestiempo" step="0.001" />
+            <datalist id="listalimitestiempo">
+                <option value="06:40">
+                <option value="08:24">
+                <option value="12:31:30">
+                <option value="23:59:59.999">
+            </datalist>
+            <br>
+            <input type="time" name="horaarribo" min="12:00" max="18:00" step="600" />
+        
+        <h2>Fecha y hora local sin información de zona horaria</h2>
+            <input type="datetime-local" name="horareunion" />
+            <br>
+            <input type="datetime-local" name="fechcita" list="listafechascita" />
+            <datalist id="listafechascita">
+                <option value="2023-05-05 08:00">
+                <option value="2023-05-12 11:30">
+                <option value="2023-05-19 09:00">
+                <option value="2023-05-26 22:19:45.32">
+            </datalist>
+            <br>
+            <input type="datetime-local" name="fechacita" min="2015-02-20 10:00" max="2015-04-24 10:00" step="3600" />
+        
+        <h2>Color</h2>    
+            <input type="color" name="colorprincipal" />
+            <br>
+            <input type="color" name="colorsecundario" list="listacoloresperfil" />
+            <datalist id="listacoloresperfil">
+                <option value="#00ffff">
+                <option value="#ff00ff">
+                <option value="#ffff00">
+                <option value="#ffaa00">
+            </datalist>
+
+        <h2>Casillas de verificación</h2>
+            <p> Intereses:<br>
+                <label><input type="checkbox" name="cb-html5" checked /> HTML5</label><br>
+                <label><input type="checkbox" name="cb-css3" checked /> CSS3</label><br>
+                <label><input type="checkbox" name="cb-javascript" /> Javascript</label>
+            </p>
+            <br>
+            <p> Para entrar al programa debes aceptar nuestros términos del servicio<br>
+                <label><input type="checkbox" name="cb-terminosservicio" required /> Acepto los términos del servicio</label><br>
+            </p>
+        
+        <h2>Botones de radio</h2>
+            <!-- se agrupan mediante el atributo name -->
+            <p> Selecciona un curso:<br>
+                <label><input type="radio" name="curso" value="ceramica" /> Cerámica</label><br>
+                <label><input type="radio" name="curso" value="jardineria" checked /> Jardinería</label><br>
+                <label><input type="radio" name="curso" value="pintura" /> Pintura</label>
+            </p>
+        
+        <h2>Archivos</h2>
+            <input type="file" name="archivosubido" />
+            <br>
+            <input type="file" name="archivossubidos" multiple />
+            <br>
+            <input type="file" name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif" />
+        
+            <h2>Botón de envio gráfico</h2>
+            <input type="image" name="botondeenvio" src="submit-form.jpg" alt="Enviar formulario" />
+        
+        <h2>Botón de envio textual</h2>
+            <input type="submit" value="Enviar" />
+        
+        <h2>Botón de restauración</h2>
+            <input type="reset" value="Restaurar" />
+        
+        <h2>Botón sin acción predefinida</h2>
+            <input type="button" value="Yo no hago nada" />
+        <nav>
+            <ul>
+                <ll>
+                    <a href="index.html">Inicio</a>
+                </ll>
+                <ll>
+                    <a href="index.html">Inicio</a>
+                </ll>
+                <ll>
+                    <a href="index.html">Inicio</a>
+                </ll>
+                <ll>
+                    <a href="index.html">Inicio</a>
+                </ll>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Novedades</h2>
+            <article>
+                <p>Prestador de servicios encensiales</p>
+            </article>
+        </section>
+        <section>
+            <h2>redes sociales</h2>
+            <article>
+                <p>Instagram | Facebook | Twitter</p>
+            </article>
+            <aside>
+                <button>
+                    Mas noticias
+                </button>
+            </aside>
+        </section>
+    </main>
+    <footer>Copyright 2022 - 2300 Hay caramba</footer>
+    <script type="text/javascript" src="index.js"></script>
+
+    <label for="file">File progress:</label>
+    <!-- Para visualizar el progreso de una tarea -->
+    <progress id="file" max="100" value="70">70%</progress>
+    
+    <label for="fuel">Fuel level:</label>
+    <!-- Para mostrar un indicador visual de un valor numérico dentro de un rango conocido -->
+    <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="63">at 50/100</meter>
+
+    <!-- Para definir graficos vectoriales escalables-->
+    <svg width="600" height="500">
+        <rect width="100" height="100" x="10" y="10" rx="10" ry="20" style="fill: red;" />
+        <circle r="100" cx="220" cy="120" style="fill: blue;"/>
+        <ellipse cx="420" cy="80" rx="100" ry="50" style="fill: green;"/>
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    </svg>
+</body>
+
+</html>
